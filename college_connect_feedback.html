@@ -7,21 +7,21 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #2c2c2c;
-            color: #f4f4f4;
+            background-color: #f8f9fa;
+            color: #343a40;
             margin: 0;
             padding: 20px;
         }
         h1 {
             text-align: center;
-            color: #ffffff;
+            color: #007bff;
             margin-bottom: 20px;
         }
         form {
-            background: #3e3e3e;
+            background: #ffffff;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             max-width: 600px;
             margin: auto;
         }
@@ -29,7 +29,7 @@
             display: block;
             margin-bottom: 10px;
             font-weight: bold;
-            color: #ffffff;
+            color: #495057;
         }
         input[type="text"],
         input[type="email"],
@@ -38,21 +38,29 @@
             width: 100%;
             padding: 12px;
             margin-bottom: 20px;
-            border: 1px solid #555;
+            border: 1px solid #ced4da;
             border-radius: 4px;
-            background-color: #4a4a4a;
-            color: #ffffff;
+            background-color: #ffffff;
+            color: #495057;
             box-sizing: border-box;
         }
         input[type="radio"] {
             margin-right: 10px;
         }
         fieldset {
-            border: none;
+            border: 1px solid #ced4da;
+            padding: 20px;
+            border-radius: 4px;
             margin-bottom: 20px;
         }
+        legend {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
         button {
-            background-color: #007BFF;
+            background-color: #007bff;
             color: white;
             padding: 12px 15px;
             border: none;
@@ -71,47 +79,48 @@
         .terms input {
             margin-right: 10px;
         }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <h1>Feedback Form for College Connect</h1>
-    <p>The current local time is: 2025-01-06T22:43:51+05:30</p>
     
     <form method="post" action="https://nocodeform.io/f/677bff071e99a330725f31be">
         <label for="fullname">Full Name
-            <input type="text" name="fullname" placeholder="Full name" aria-label="Full name" required>
+            <input type="text" id="fullname" name="fullname" placeholder="Full name" aria-label="Full name" required>
         </label>
         <label for="email">Email
-            <input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
+            <input type="email" id="email" name="email" placeholder="Email address" aria-label="Email address" required>
         </label>
         <label for="date">Date
             <input type="date" id="date" name="date">
         </label>
         <fieldset>
-            <legend style="color: #ffffff;">How would you rate our product</legend>
+            <legend>How would you rate our product?</legend>
             <label for="poor">
-                <input type="radio" id="poor" name="size" value="poor" checked>
+                <input type="radio" id="poor" name="rating" value="poor" checked>
                 Poor
             </label>
             <label for="good">
-                <input type="radio" id="good" name="size" value="good">
+                <input type="radio" id="good" name="rating" value="good">
                 Good
             </label>
             <label for="excellent">
-                <input type="radio" id="excellent" name="size" value="excellent">
+                <input type="radio" id="excellent" name="rating" value="excellent">
                 Excellent
             </label>
         </fieldset>
         <label for="feedback">Feedback
             <textarea id="feedback" name="feedback" rows="4" placeholder="Your feedback here..."></textarea>
         </label>
-        <fieldset class="terms">
-            <label for="terms">
-                <input type="checkbox" role="switch" id="terms" name="terms" required>
-                I agree to the <a href="#" style="color: #007BFF;">Privacy Policy</a>
-            </label>
-        </fieldset>
-        <button type="submit" class="contrast">Subscribe</button>
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>
+
